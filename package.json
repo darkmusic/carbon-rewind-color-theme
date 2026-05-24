@@ -34,7 +34,6 @@
       "terminal.integrated.macOptionIsMeta": true,
       "diffEditor.ignoreTrimWhitespace": false,
       "emmet.triggerExpansionOnTab": true,
-      "editor.accessibilitySupport": "on",
       "workbench.activityBar.location": "top",
       "workbench.startupEditor": "newUntitledFile",
       "javascript.suggest.autoImports": true,
