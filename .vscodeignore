@@ -1,3 +1,6 @@
 .vscode/**
 .gitignore
+.github/**
+.cursor/**
 esbuild.js
+CHANGELOG.md
