@@ -1,9 +1,9 @@
 {
-  "name": "carbon-react-color-theme",
-  "displayName": "Carbon React Color Theme",
+  "name": "carbon-rewind-color-theme",
+  "displayName": "Carbon Rewind Color Theme",
   "description": "Theme is a sleek, modern extension that enhances readability and reduces eye strain.",
-  "version": "1.3.6",
-  "publisher": "yathink3",
+  "version": "1.0.0",
+  "publisher": "darkmusic",
   "engines": {
     "vscode": "^1.13.0"
   },
@@ -36,38 +36,14 @@
       "emmet.triggerExpansionOnTab": true,
       "workbench.activityBar.location": "top",
       "workbench.startupEditor": "newUntitledFile",
-      "javascript.suggest.autoImports": true,
       "extensions.ignoreRecommendations": true,
-      "typescript.tsserver.log": "off",
-      "files.associations": {
-        ".env.*": "dotenv",
-        ".prettierrc": "json",
-        "*.css": "css"
-      },
-      "symbols.files.associations": {
-        "*.module.ts": "nest",
-        "*.guard.ts": "typescript",
-        "*.spec.ts": "ts-test",
-        "*.e2e-spec.ts": "ts-test",
-        "vitest.config.e2e.ts": "vite",
-        ".env.example": "gear"
-      },
-      "tailwindCSS.experimental.classRegex": [
-        [
-          "tv\\(([^)]*)\\)",
-          "[\"'`]([^\"'`]*).*?[\"'`]"
-        ]
-      ],
       "editor.parameterHints.enabled": false,
       "editor.renderLineHighlight": "gutter",
-      "cSpell.language": "en,pt",
       "explorer.confirmDelete": false,
-      "gitlens.codeLens.recentChange.enabled": false,
       "terminal.integrated.showExitAlert": false,
       "[prisma]": {
         "editor.formatOnSave": true
       },
-      "typescript.suggest.autoImports": true,
       "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
       },
@@ -78,25 +54,6 @@
       "emmet.syntaxProfiles": {
         "javascript": "jsx"
       },
-      "cSpell.enableFiletypes": [
-        "!asciidoc",
-        "!c",
-        "!cpp",
-        "!csharp",
-        "!go",
-        "!handlebars",
-        "!haskell",
-        "!jade",
-        "!java",
-        "!latex",
-        "!php",
-        "!pug",
-        "!python",
-        "!restructuredtext",
-        "!rust",
-        "!scala",
-        "!scss"
-      ],
       "editor.acceptSuggestionOnCommitCharacter": false,
       "explorer.compactFolders": false,
       "git.enableSmartCommit": true,
@@ -104,14 +61,8 @@
       "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
       },
-      "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "graphql"
-      ],
       "editor.semanticHighlighting.enabled": false,
       "breadcrumbs.enabled": false,
-      "gitlens.codeLens.authors.enabled": false,
       "editor.tabSize": 2,
       "files.exclude": {
         "**/CVS": true,
@@ -121,48 +72,11 @@
         "**/.git": true,
         ".vscode": true
       },
-      "update.mode": "start",
       "terminal.integrated.gpuAcceleration": "off",
       "window.commandCenter": true,
       "git.openRepositoryInParentFolders": "always",
-      "symbols.hidesExplorerArrows": false,
-      "console-ninja.featureSet": "Community",
       "workbench.editor.empty.hint": "hidden",
-      "update.showReleaseNotes": false,
-      "security.promptForLocalFileProtocolHandling": false,
-      "apc.activityBar": {
-        "position": "bottom",
-        "hideSettings": true,
-        "size": 48,
-        "itemMargin": 8,
-        "itemSize": 32
-      },
       "editor.hideCursorInOverviewRuler": true,
-      "apc.electron": {
-        "titleBarStyle": "hiddenInset",
-        "trafficLightPosition": {
-          "x": 11,
-          "y": 10
-        },
-        "frame": false
-      },
-      "apc.header": {
-        "height": 36
-      },
-      "apc.listRow": {
-        "height": 24
-      },
-      "apc.font.family": "Inter",
-      "apc.stylesheet": {
-        ".title-label > h2": "display: none",
-        ".editor-actions": "display: none",
-        ".nosidebar .inline-tabs-placeholder": "width: 75px",
-        ".pane-header": "padding: 0 8px",
-        ".pane-body": "padding: 8px",
-        ".split-view-view:first-child .pane-header": "display: none !important;",
-        ".monaco-list-row": "border-radius: 4px;",
-        ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
-      },
       "explorer.sortOrder": "foldersNestsFiles",
       "explorer.fileNesting.patterns": {
         "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*",
@@ -171,125 +85,64 @@
         ".env": ".env*"
       },
       "explorer.fileNesting.enabled": true,
-      "cSpell.userWords": [
-        "bootcamp",
-        "chakra",
-        "checkin",
-        "checkins",
-        "clsx",
-        "Codegen",
-        "datadog",
-        "Datetime",
-        "dayjs",
-        "Dotenv",
-        "Elysia",
-        "esbuild",
-        "fastify",
-        "Fastify",
-        "feedbackwidget",
-        "ffprobe",
-        "Hasher",
-        "Hono",
-        "ilike",
-        "IUGU",
-        "jamjuree",
-        "jupiter",
-        "liveblocks",
-        "LIVEBLOCKS",
-        "Marguerita",
-        "middlewares",
-        "mixpanel",
-        "monaco",
-        "nestjs",
-        "omni",
-        "Omni",
-        "Onboarded",
-        "pallas",
-        "postgres",
-        "postgresql",
-        "prefetch",
-        "reactflow",
-        "roboto",
-        "rocketseat",
-        "rotion",
-        "rsxp",
-        "Sandpack",
-        "shiki",
-        "skylab",
-        "sqlite",
-        "supergraph",
-        "svgr",
-        "sympla",
-        "tailwindcss",
-        "textblock",
-        "tiptap",
-        "trpc",
-        "TRPC",
-        "tsup",
-        "unfollow",
-        "Unfollow",
-        "unform",
-        "Unform",
-        "unmark",
-        "upsert",
-        "Usuario",
-        "WEBPUSH"
-      ],
-      "workbench.productIconTheme": "carbon-react-icons",
-      "workbench.iconTheme": "carbon-react-monospace"
+      "workbench.productIconTheme": "carbon-rewind-icons",
+      "workbench.iconTheme": "carbon-rewind-monospace"
     },
     "themes": [
       {
-        "label": "Carbon React Color Theme",
+        "label": "Carbon Rewind Color Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/CarbonReact-color-theme.json"
+        "path": "./themes/CarbonRewind-color-theme.json"
       },
       {
-        "label": "Carbon React Color Theme - Pure",
+        "label": "Carbon Rewind Color Theme - Pure",
         "uiTheme": "vs-dark",
-        "path": "./themes/CarbonReact-pure-theme.json"
+        "path": "./themes/CarbonRewind-pure-theme.json"
       },
       {
-        "label": "Carbon React Color Theme - Winter",
+        "label": "Carbon Rewind Color Theme - Winter",
         "uiTheme": "vs-dark",
-        "path": "./themes/CarbonReact-winter-theme.json"
+        "path": "./themes/CarbonRewind-winter-theme.json"
       },
       {
-        "label": "Carbon React Color Theme - Maya",
+        "label": "Carbon Rewind Color Theme - Maya",
         "uiTheme": "vs-dark",
-        "path": "./themes/CarbonReact-maya-theme.json"
+        "path": "./themes/CarbonRewind-maya-theme.json"
       },
       {
-        "label": "Carbon React Color Theme - Maya Black",
+        "label": "Carbon Rewind Color Theme - Maya Black",
         "uiTheme": "vs-dark",
-        "path": "./themes/CarbonReact-maya-black-theme.json"
+        "path": "./themes/CarbonRewind-maya-black-theme.json"
       }
     ],
     "productIconThemes": [
       {
-        "id": "carbon-react-icons",
-        "label": "Carbon React Icons",
+        "id": "carbon-rewind-icons",
+        "label": "Carbon Rewind Icons",
         "path": "./product-icon-themes/fluent-icons.json"
       }
     ],
     "iconThemes": [
       {
-        "id": "carbon-react-symbols",
-        "label": "Carbon React Symbol",
+        "id": "carbon-rewind-symbols",
+        "label": "Carbon Rewind Symbol",
         "path": "./icon-themes/symbol-icon-theme.json"
       },
       {
-        "id": "carbon-react-monospace",
-        "label": "Carbon React Monospace",
+        "id": "carbon-rewind-monospace",
+        "label": "Carbon Rewind Monospace",
         "path": "./icon-themes/icons-mono/monospace-idx-file-icon-theme.json"
       }
     ]
   },
+  "scripts": {
+    "vsix": "vsce package"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yathink3/carbon-react-color-theme.git"
+    "url": "https://github.com/darkmusic/carbon-rewind-color-theme.git"
   },
-  "homepage": "https://github.com/yathink3/carbon-react-color-theme/blob/master/README.md",
+  "homepage": "https://github.com/darkmusic/carbon-rewind-color-theme/blob/main/README.md",
   "keywords": [
     "vscode",
     "theme",
@@ -297,9 +150,9 @@
     "monokai",
     "darker",
     "carbon",
-    "react",
+    "rewind",
     "winter"
   ],
-  "author": "Eser Ozvataf <eser@ozvataf.com> (http://eser.ozvataf.com)",
+  "author": "Thomas Johnson <tbjohnson123@gmail.com> (http://github.com/darkmusic)",
   "license": "MIT"
 }

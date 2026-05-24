@@ -1,4 +1,4 @@
-# [Carbon React Color Theme](https://github.com/yathink3/carbon-react-color-theme)
+# [Carbon Rewind Color Theme](https://github.com/darkmusic/carbon-rewind-color-theme)
 
 A darker variation of the One Dark Pro theme for Visual Studio Code, with Monokai-inspired code coloring.
 
@@ -6,14 +6,14 @@ A darker variation of the One Dark Pro theme for Visual Studio Code, with Monoka
 
 Press `Ctrl/Command + Shift + P` to launch the command palette, then run:
 ```
-ext install yathink3.carbon-react-color-theme
+ext install darkmusic.carbon-rewind-color-theme
 ```
 
 ## What's New
 
-1. Carbon React Color Theme - Maya  
-2. Carbon React Color Theme - Maya Black  
-3. Carbon React Icons  
+1. Carbon Rewind Color Theme - Maya
+2. Carbon Rewind Color Theme - Maya Black
+3. Carbon Rewind Icons
 
 ## Default Theme Set to Fira Code
 
@@ -71,21 +71,21 @@ To use LigaComicMono as your font:
 
 ## Screenshots
 
-**Carbon React Color Theme**  
+**Carbon Rewind Color Theme**
 ![Screenshot 01](images/screenshots/carbon-color-theme.png "Screenshot #01")
 
-**Carbon React Color Theme - Pure**  
+**Carbon Rewind Color Theme - Pure**
 ![Screenshot 02](images/screenshots/carbon-color-theme-pure.png "Screenshot #02")
 
-**Carbon React Color Theme - Winter**  
+**Carbon Rewind Color Theme - Winter**
 ![Screenshot 03](images/screenshots/carbon-color-theme-winter.png "Screenshot #03")
 
-**Carbon React Color Theme - Maya**  
+**Carbon Rewind Color Theme - Maya**
 ![Screenshot 04](images/screenshots/carbon-color-theme-maya.png "Screenshot #04")
 
 ## Todo List
 
-See [GitHub Projects](https://github.com/yathink3/carbon-react-color-theme) for more details.
+See [GitHub Projects](https://github.com/darkmusic/carbon-rewind-color-theme) for more details.
 
 ## Requirements
 
@@ -93,7 +93,7 @@ See [GitHub Projects](https://github.com/yathink3/carbon-react-color-theme) for 
 
 ## License
 
-This project is licensed under the Apache 2.0 License. For more details, please see the [LICENSE](LICENSE) file.
+This project is licensed under the MIT License. For more details, please see the [LICENSE](LICENSE) file.
 
 ## Contributing
 
