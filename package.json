@@ -1,8 +1,8 @@
 {
   "name": "carbon-rewind-theme",
-  "displayName": "Carbon Rewind Color Theme",
+  "displayName": "Carbon Rewind Theme",
   "description": "Theme is a sleek, modern extension that enhances readability and reduces eye strain.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "darkmusic",
   "engines": {
     "vscode": "^1.13.0"
