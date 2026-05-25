@@ -1,5 +1,8 @@
 # [Carbon Rewind Color Theme](https://github.com/darkmusic/carbon-rewind-color-theme)
 
+[![Visual Studio Marketplace](https://shields.io/badge/Visual%20Studio%20Marketplace-darkmusic.carbon--rewind--theme-blue?style=flat-square&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=darkmusic.carbon-rewind-theme)
+[![Visual Studio Marketplace Installs](https://shields.io/badge/installs-marketplace-blue?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=darkmusic.carbon-rewind-theme)
+
 A darker variation of the One Dark Pro theme for Visual Studio Code, with Monokai-inspired code coloring.
 
 ## Installation
