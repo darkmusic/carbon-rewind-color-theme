@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-05-25
+
+### Added
+
+- GitHub Actions release workflow: build VSIX, publish to Visual Studio Marketplace, and attach artifacts to GitHub Releases
+- `@vscode/vsce` as a dev dependency with `publish:marketplace` script (`--skip-duplicate` for safe re-runs)
+
+### Changed
+
+- Marketplace extension ID to **`darkmusic.carbon-rewind-theme`** (package `name`: `carbon-rewind-theme`; was `carbon-rewind-color-theme`)
+- README installation command updated for the new extension ID
+
+### Fixed
+
+- Exclude `.github/`, `.cursor/`, and `CHANGELOG.md` from the packaged VSIX
+
 ## [1.0.0] - 2026-05-24
 
 ### Added
