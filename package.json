@@ -1,8 +1,8 @@
 {
-  "name": "carbon-rewind-color-theme",
+  "name": "carbon-rewind-theme",
   "displayName": "Carbon Rewind Color Theme",
   "description": "Theme is a sleek, modern extension that enhances readability and reduces eye strain.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "darkmusic",
   "engines": {
     "vscode": "^1.13.0"
@@ -137,7 +137,7 @@
   },
   "scripts": {
     "vsix": "vsce package",
-    "publish:marketplace": "vsce publish --packagePath ./*.vsix"
+    "publish:marketplace": "vsce publish --packagePath ./*.vsix --skip-duplicate"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.0.0"

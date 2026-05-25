@@ -35,14 +35,14 @@ jobs:
 
       - run: npm run vsix
 
-      - name: Publish to Visual Studio Marketplace
-        run: npm run publish:marketplace
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
-
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
           files: "*.vsix"
           generate_release_notes: true
+
+      - name: Publish to Visual Studio Marketplace
+        run: npm run publish:marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}

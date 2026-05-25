@@ -6,7 +6,7 @@ A darker variation of the One Dark Pro theme for Visual Studio Code, with Monoka
 
 Press `Ctrl/Command + Shift + P` to launch the command palette, then run:
 ```
-ext install darkmusic.carbon-rewind-color-theme
+ext install darkmusic.carbon-rewind-theme
 ```
 
 ## What's New
