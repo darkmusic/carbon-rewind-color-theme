@@ -2,8 +2,9 @@
 
 [![Visual Studio Marketplace](https://shields.io/badge/Visual%20Studio%20Marketplace-darkmusic.carbon--rewind--theme-blue?style=flat-square&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=darkmusic.carbon-rewind-theme)
 [![Visual Studio Marketplace Installs](https://shields.io/badge/installs-marketplace-blue?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=darkmusic.carbon-rewind-theme)
+[![Open VSX](https://shields.io/badge/Open%20VSX-darkmusic.carbon--rewind--theme-blue?style=flat-square)](https://open-vsx.org/extension/darkmusic/carbon-rewind-theme)
 
-A darker variation of the One Dark Pro theme for Visual Studio Code, with Monokai-inspired code coloring.
+A family of dark color themes with matching file and product icons for Visual Studio Code and VS Code–compatible editors (Cursor, VSCodium, Gitpod, and others), available on the Visual Studio Marketplace and Open VSX.
 
 ## Installation
 
@@ -21,58 +22,58 @@ ext install darkmusic.carbon-rewind-theme
 5. Carbon Rewind Color Theme - Ember
 6. TypeScript theme generation toolchain — see [`scripts/theme-gen/README.md`](scripts/theme-gen/README.md)
 
-## Default Theme Set to Fira Code
+## Default font: FiraCode Nerd Font
 
-To use Fira Code as your default font:
+Carbon Rewind sets **FiraCode Nerd Font** as the default editor and terminal font when the extension is installed. To install the font locally:
 
-1. Download and install the Fira Code TTF file from the link below:
-   [Install FiraCode](https://portfone.vercel.app/FiraCode.ttf)
-2. In your settings, add the following configuration:
+1. Download [FiraCode Nerd Font (latest release)](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip), extract the archive, and install the font files for your system.
+2. Reload your editor if the font does not appear immediately. The extension applies these defaults:
+
    ```json
-   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
-   "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+   "editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+   "terminal.integrated.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
    "editor.fontLigatures": true,
    "editor.fontSize": 12.4,
    "editor.letterSpacing": 0.2,
    "editor.lineHeight": 1.5,
    "terminal.integrated.fontSize": 12,
-   "scm.showHistoryGraph": false,
+   "scm.showHistoryGraph": false
    ```
 
-## For JetBrains Theme
+## Alternative: Hack Nerd Font
 
-To use JetBrains Mono as your font:
+To use Hack Nerd Font instead:
 
-1. Download and install the JetBrains Mono TTF file from the link below:
-   [Install JetBrains Mono](https://portfone.vercel.app/JetBrainsMono.ttf)
+1. Download [Hack Nerd Font (latest release)](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip), extract the archive, and install the font files for your system.
 2. In your settings, add the following configuration:
+
    ```json
-   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, Courier New, monospace",
-   "terminal.integrated.fontFamily": "JetBrains Mono, Menlo, Monaco, Courier New, monospace",
+   "editor.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+   "terminal.integrated.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
    "editor.fontLigatures": true,
    "editor.fontSize": 12.4,
    "editor.letterSpacing": 0.4,
    "editor.lineHeight": 1.5,
    "terminal.integrated.fontSize": 12,
-   "scm.showHistoryGraph": false,
+   "scm.showHistoryGraph": false
    ```
 
-## For LigaComicMono Theme
+## Alternative: ComicShannsMono Nerd Font
 
-To use LigaComicMono as your font:
+To use ComicShannsMono Nerd Font instead:
 
-1. Download and install the JetBrains Mono TTF file from the link below:
-   [Install LigaComicMono](https://portfone.vercel.app/LigaComicMono.ttf)
+1. Download [ComicShannsMono Nerd Font (latest release)](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/ComicShannsMono.zip), extract the archive, and install the font files for your system.
 2. In your settings, add the following configuration:
+
    ```json
-   "editor.fontFamily": "Liga Comic Mono, Menlo, Monaco, Courier New, monospace",
-   "terminal.integrated.fontFamily": "Liga Comic Mono, Menlo, Monaco, Courier New, monospace",
+   "editor.fontFamily": "ComicShannsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+   "terminal.integrated.fontFamily": "ComicShannsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
    "editor.fontLigatures": true,
    "editor.fontSize": 13.4,
    "editor.letterSpacing": 0.4,
    "editor.lineHeight": 1.4,
    "terminal.integrated.fontSize": 12.5,
-   "scm.showHistoryGraph": false,
+   "scm.showHistoryGraph": false
    ```
 
 ## Screenshots

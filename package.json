@@ -16,6 +16,12 @@
       "terminal.integrated.defaultProfile.windows": "Git Bash",
       "terminal.integrated.defaultProfile.linux": null,
       "terminal.integrated.defaultProfile.osx": null,
+      "editor.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+      "terminal.integrated.fontFamily": "FiraCode Nerd Font, Consolas, 'Courier New', monospace",
+      "editor.fontSize": 12.4,
+      "editor.letterSpacing": 0.2,
+      "editor.lineHeight": 1.5,
+      "terminal.integrated.fontSize": 12,
       "editor.fontLigatures": true,
       "editor.linkedEditing": true,
       "editor.cursorBlinking": "expand",
@@ -198,5 +204,10 @@
     "aurora"
   ],
   "author": "Thomas Johnson <tbjohnson123@gmail.com> (http://github.com/darkmusic)",
-  "license": "MIT"
+  "license": "MIT",
+  "allowScripts": {
+    "@vscode/vsce-sign@2.0.9": true,
+    "esbuild@0.28.1": true,
+    "keytar@7.9.0": true
+  }
 }
