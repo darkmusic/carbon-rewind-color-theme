@@ -14,9 +14,12 @@ ext install darkmusic.carbon-rewind-theme
 
 ## What's New
 
-1. Carbon Rewind Color Theme - Maya
-2. Carbon Rewind Color Theme - Maya Black
-3. Carbon Rewind Icons
+1. Carbon Rewind Color Theme - Aurora
+2. Carbon Rewind Color Theme - Obsidian
+3. Carbon Rewind Color Theme - Dusk
+4. Carbon Rewind Color Theme - Moss
+5. Carbon Rewind Color Theme - Ember
+6. TypeScript theme generation toolchain — see [`scripts/theme-gen/README.md`](scripts/theme-gen/README.md)
 
 ## Default Theme Set to Fira Code
 
@@ -74,6 +77,8 @@ To use LigaComicMono as your font:
 
 ## Screenshots
 
+Capture instructions: [`scripts/screenshots/CAPTURE.md`](scripts/screenshots/CAPTURE.md)
+
 **Carbon Rewind Color Theme**
 ![Screenshot 01](images/screenshots/carbon-color-theme.png "Screenshot #01")
 
@@ -85,6 +90,24 @@ To use LigaComicMono as your font:
 
 **Carbon Rewind Color Theme - Maya**
 ![Screenshot 04](images/screenshots/carbon-color-theme-maya.png "Screenshot #04")
+
+**Carbon Rewind Color Theme - Maya Black**
+![Screenshot 05](images/screenshots/carbon-color-theme-maya-black.png "Screenshot #05")
+
+**Carbon Rewind Color Theme - Ember**
+![Screenshot 06](images/screenshots/carbon-color-theme-ember.png "Screenshot #06")
+
+**Carbon Rewind Color Theme - Moss**
+![Screenshot 07](images/screenshots/carbon-color-theme-moss.png "Screenshot #07")
+
+**Carbon Rewind Color Theme - Dusk**
+![Screenshot 08](images/screenshots/carbon-color-theme-dusk.png "Screenshot #08")
+
+**Carbon Rewind Color Theme - Obsidian**
+![Screenshot 09](images/screenshots/carbon-color-theme-obsidian.png "Screenshot #09")
+
+**Carbon Rewind Color Theme - Aurora**
+![Screenshot 10](images/screenshots/carbon-color-theme-aurora.png "Screenshot #10")
 
 ## Todo List
 

@@ -1,21 +1,41 @@
-name: Create Release
+name: Release Recovery (retry publish)
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to build/publish (example: v1.0.3)"
+        required: true
+        type: string
+      publish_github_release_asset:
+        description: "Upload VSIX to the GitHub Release if missing"
+        required: true
+        type: boolean
+        default: true
+      publish_marketplace:
+        description: "Publish to VS Marketplace (retries; skip-duplicate)"
+        required: true
+        type: boolean
+        default: true
+      publish_open_vsx:
+        description: "Publish to Open VSX (retries; skip-duplicate)"
+        required: true
+        type: boolean
+        default: true
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  recover:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ inputs.tag }}
 
       - uses: actions/setup-node@v4
         with:
@@ -25,52 +45,16 @@ jobs:
       - name: Verify tag matches package.json version
         run: |
           PKG_VERSION=$(node -p "require('./package.json').version")
-          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          TAG_VERSION="${{ inputs.tag }}"
+          TAG_VERSION="${TAG_VERSION#v}"
           if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
-            echo "Tag ${GITHUB_REF_NAME} (version $TAG_VERSION) does not match package.json version $PKG_VERSION"
+            echo "Input tag ${{ inputs.tag }} (version $TAG_VERSION) does not match package.json version $PKG_VERSION"
             exit 1
           fi
 
       - run: npm ci
 
       - run: npm run vsix
-
-      - name: Verify VSIX package
-        run: |
-          set -euo pipefail
-          shopt -s nullglob
-          vsix=( *.vsix )
-          if [ ${#vsix[@]} -ne 1 ]; then
-            echo "Expected exactly one VSIX package, found ${#vsix[@]}"
-            printf '%s\n' "${vsix[@]}"
-            exit 1
-          fi
-          echo "Built ${vsix[0]}"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: vsix
-          path: "*.vsix"
-          if-no-files-found: error
-
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - run: npm ci
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: vsix
 
       - name: Resolve VSIX package
         id: vsix
@@ -85,13 +69,13 @@ jobs:
           fi
           echo "path=${vsix[0]}" >> "$GITHUB_OUTPUT"
 
-      - name: Create draft GitHub Release and attach VSIX
+      - name: Prepare GitHub Release asset
+        if: ${{ inputs.publish_github_release_asset }}
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          TAG="${GITHUB_REF_NAME}"
+          TAG="${{ inputs.tag }}"
           VSIX="${{ steps.vsix.outputs.path }}"
           ASSET_NAME="$(basename "$VSIX")"
 
@@ -116,6 +100,7 @@ jobs:
           fi
 
       - name: Publish to Visual Studio Marketplace (retry)
+        if: ${{ inputs.publish_marketplace }}
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
@@ -136,6 +121,7 @@ jobs:
           exit 1
 
       - name: Publish to Open VSX (retry)
+        if: ${{ inputs.publish_open_vsx }}
         env:
           OPEN_VSX_PAT: ${{ secrets.OPEN_VSX_PAT }}
         run: |
@@ -156,12 +142,12 @@ jobs:
           exit 1
 
       - name: Publish GitHub Release
+        if: ${{ inputs.publish_github_release_asset }}
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          TAG="${GITHUB_REF_NAME}"
+          TAG="${{ inputs.tag }}"
 
           if [ "$(gh release view "$TAG" --json isDraft --jq '.isDraft')" = "true" ]; then
             gh release edit "$TAG" --draft=false

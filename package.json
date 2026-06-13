@@ -2,7 +2,7 @@
   "name": "carbon-rewind-theme",
   "displayName": "Carbon Rewind Theme",
   "description": "Theme is a sleek, modern extension that enhances readability and reduces eye strain.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "darkmusic",
   "engines": {
     "vscode": "^1.13.0"
@@ -113,6 +113,31 @@
         "label": "Carbon Rewind Color Theme - Maya Black",
         "uiTheme": "vs-dark",
         "path": "./themes/CarbonRewind-maya-black-theme.json"
+      },
+      {
+        "label": "Carbon Rewind Color Theme - Ember",
+        "uiTheme": "vs-dark",
+        "path": "./themes/CarbonRewind-ember-theme.json"
+      },
+      {
+        "label": "Carbon Rewind Color Theme - Moss",
+        "uiTheme": "vs-dark",
+        "path": "./themes/CarbonRewind-moss-theme.json"
+      },
+      {
+        "label": "Carbon Rewind Color Theme - Dusk",
+        "uiTheme": "vs-dark",
+        "path": "./themes/CarbonRewind-dusk-theme.json"
+      },
+      {
+        "label": "Carbon Rewind Color Theme - Obsidian",
+        "uiTheme": "vs-dark",
+        "path": "./themes/CarbonRewind-obsidian-theme.json"
+      },
+      {
+        "label": "Carbon Rewind Color Theme - Aurora",
+        "uiTheme": "vs-dark",
+        "path": "./themes/CarbonRewind-aurora-theme.json"
       }
     ],
     "productIconThemes": [
@@ -137,10 +162,20 @@
   },
   "scripts": {
     "vsix": "vsce package",
-    "publish:marketplace": "vsce publish --packagePath ./*.vsix --skip-duplicate"
+    "publish:marketplace": "vsce publish --packagePath ./*.vsix --skip-duplicate",
+    "theme:extract-palette": "tsx scripts/theme-gen/extract-palette.ts",
+    "theme:create-variants": "tsx scripts/theme-gen/create-variants.ts",
+    "theme:patch-palettes": "tsx scripts/theme-gen/patch-palettes.ts",
+    "theme:generate": "tsx scripts/theme-gen/generate.ts",
+    "theme:validate": "tsx scripts/theme-gen/validate.ts",
+    "theme:typecheck": "tsc --noEmit -p tsconfig.json",
+    "theme:all": "npm run theme:typecheck && npm run theme:generate && npm run theme:validate"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.0.0"
+    "@types/node": "^22.0.0",
+    "@vscode/vsce": "^3.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
   },
   "repository": {
     "type": "git",
@@ -155,7 +190,12 @@
     "darker",
     "carbon",
     "rewind",
-    "winter"
+    "winter",
+    "ember",
+    "moss",
+    "dusk",
+    "obsidian",
+    "aurora"
   ],
   "author": "Thomas Johnson <tbjohnson123@gmail.com> (http://github.com/darkmusic)",
   "license": "MIT"

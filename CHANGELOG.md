@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-06-13
+
+### Added
+
+- Five new dark themes: **Ember**, **Moss**, **Dusk**, **Obsidian**, and **Aurora**
+- TypeScript theme generation toolchain (`scripts/theme-gen/`) with palette-driven color replacement
+- Screenshot sample fixture and capture guide (`scripts/screenshots/`)
+- CI validation step: `npm run theme:all`
+
+### Changed
+
+- Polished existing themes (Base, Pure, Winter, Maya, Maya Black) with subtle palette differentiation
+- Modernized deprecated VS Code color keys across generated themes
+- README screenshots section expanded for all 10 themes (including Maya Black)
+- Bumped extension version to 1.1.0
+
 ## [1.0.2] - 2026-05-25
 
 ### Changed

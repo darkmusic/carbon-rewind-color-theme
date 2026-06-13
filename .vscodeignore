@@ -4,3 +4,7 @@
 .cursor/**
 esbuild.js
 CHANGELOG.md
+scripts/**
+tsconfig.json
+themes/_scaffold/**
+themes/_palettes/**
